@@ -64,10 +64,12 @@ class MainViewController: UIViewController {
         let devicePosition: AVCaptureDevicePosition = AVCaptureDevicePosition.back
         let deviceOrientation = UIDevice.current.orientation
         let orientation: GMVImageOrientation = GMVUtility.imageOrientation(from: deviceOrientation, with: devicePosition, defaultDeviceOrientation: UIDeviceOrientation.unknown)
+
+        // Whenever options are supplied the detector fails
         let options: [AnyHashable:Any] = [GMVDetectorImageOrientation: orientation]
         let locationOptions = [GMVDetectorImageOrientation:GMVImageOrientation.topLeft]
 
-        textView.text.append("Looking for orientation \(orientation.rawValue)\n")
+        //textView.text.append("Looking for orientation \(orientation.rawValue)\n")
 
         if let barcodes = barcodeDetector?.features(in: image, options: nil ) {
             output(barcodes: barcodes)
@@ -79,12 +81,17 @@ class MainViewController: UIViewController {
     fileprivate func output(barcodes: [GMVFeature]) {
         textView.text.append("Barcodes: \(barcodes.count)\n")
         for feature in barcodes {
+            textView.text.append("Barcode discovered\n")
             let barcodeFeature = feature as? GMVBarcodeFeature
-            textView.text.append("a feature raw value: \(barcodeFeature?.rawValue)\n")
-            textView.text.append("a feature display value: \(barcodeFeature?.displayValue)\n")
-            textView.text.append("a feature format: \(barcodeFeature?.format)\n")
-            textView.text.append("a feature value format\(barcodeFeature?.valueFormat)\n")
-            textView.text.append("a feature url: \(barcodeFeature?.url)\n")
+            textView.text.append("Raw value: \(barcodeFeature?.rawValue!)\n")
+            // This is the binary code for the format
+
+
+            //textView.text.append("a feature value format\(barcodeFeature?.valueFormat)\n")
+            if let url = barcodeFeature?.url {
+                textView.text.append("a feature url: \(url)\n")
+            }
+
         }
     }
 }
@@ -94,7 +101,7 @@ extension MainViewController: UIImagePickerControllerDelegate, UINavigationContr
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
         textView.text.append("\n")
-        textView.text.append("finished picking media\n")
+        //textView.text.append("finished picking media\n")
         var imageView = UIImageView()
         imageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         initializeBarcodeDetector()
