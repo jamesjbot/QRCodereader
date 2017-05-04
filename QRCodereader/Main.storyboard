@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dil-P1-gpS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="QRCodereader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qqk-9e-EmL">
+                                <rect key="frame" x="16" y="71" width="343" height="521"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" alwaysBounceVertical="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qnp-n2-BM8">
+                                        <rect key="frame" x="2.5" y="0.0" width="338" height="505"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WU-E0-CJ2">
+                                        <rect key="frame" x="94.5" y="521" width="154" height="0.0"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                        <state key="normal" title="Take Another Picture">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="takePicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWa-EK-oCX"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qnp-n2-BM8" secondAttribute="trailing" constant="2.5" id="Wei-u9-sxl"/>
+                                    <constraint firstItem="qnp-n2-BM8" firstAttribute="leading" secondItem="qqk-9e-EmL" secondAttribute="leading" constant="2.5" id="yaz-TU-tku"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qqk-9e-EmL" secondAttribute="bottom" constant="26" id="Soo-Jx-zcN"/>
+                            <constraint firstItem="qqk-9e-EmL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="7" id="V7c-6d-sSh"/>
+                            <constraint firstItem="qqk-9e-EmL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="nV4-EA-Lro"/>
+                            <constraint firstItem="qqk-9e-EmL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="s8k-kp-EX7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="U6N-Y8-Aiv"/>
+                    <connections>
+                        <outlet property="textView" destination="qnp-n2-BM8" id="8hv-4l-0fK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iiZ-0e-eiY">
+            <objects>
+                <tabBarController id="dil-P1-gpS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="ndk-CS-kqa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Mm8-SB-VXR" kind="relationship" relationship="viewControllers" id="ZQn-0V-Qyr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9FQ-YZ-0PP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1090" y="37"/>
+        </scene>
+        <!--Photo-->
+        <scene sceneID="wje-T9-gZY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mm8-SB-VXR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Photo" id="vaQ-my-zYa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ysa-VF-aeE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VuA-nP-Lmn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="huv-Ko-G35" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="38"/>
+        </scene>
+        <!--Video-->
+        <scene sceneID="Tm2-4h-PTM">
+            <objects>
+                <viewController id="4Rc-sQ-a9z" customClass="CameraViewController" customModule="QRCodereader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u4E-Sn-TNl"/>
+                        <viewControllerLayoutGuide type="bottom" id="tdD-Vm-pHo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="I0T-ir-9AR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GbF-eJ-zg8" userLabel="Placeholder">
+                                <rect key="frame" x="0.0" y="28" width="375" height="590"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCg-KZ-f4v" userLabel="Overlay">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mCg-KZ-f4v" secondAttribute="trailing" id="1R2-VL-ApO"/>
+                            <constraint firstItem="GbF-eJ-zg8" firstAttribute="leading" secondItem="I0T-ir-9AR" secondAttribute="leading" id="5v3-p5-nWQ"/>
+                            <constraint firstItem="GbF-eJ-zg8" firstAttribute="trailing" secondItem="I0T-ir-9AR" secondAttribute="trailing" id="Afu-FT-z0U"/>
+                            <constraint firstItem="GbF-eJ-zg8" firstAttribute="top" secondItem="u4E-Sn-TNl" secondAttribute="bottom" constant="8" id="R44-M9-qu9"/>
+                            <constraint firstItem="tdD-Vm-pHo" firstAttribute="top" secondItem="mCg-KZ-f4v" secondAttribute="bottom" id="fLR-yb-4gb"/>
+                            <constraint firstItem="tdD-Vm-pHo" firstAttribute="top" secondItem="GbF-eJ-zg8" secondAttribute="bottom" id="s5k-J8-yZk"/>
+                            <constraint firstItem="mCg-KZ-f4v" firstAttribute="top" secondItem="u4E-Sn-TNl" secondAttribute="bottom" id="uKb-ur-p0Z"/>
+                            <constraint firstItem="mCg-KZ-f4v" firstAttribute="leading" secondItem="I0T-ir-9AR" secondAttribute="leading" id="vGS-Os-lzM"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Video" id="1Ft-us-Nw0"/>
+                    <connections>
+                        <outlet property="overLay" destination="mCg-KZ-f4v" id="XN4-Y8-fkb"/>
+                        <outlet property="placeHolder" destination="GbF-eJ-zg8" id="CcT-SD-4Bs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80a-Lf-g3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1090.4000000000001" y="800.14992503748135"/>
+        </scene>
+    </scenes>
+</document>
