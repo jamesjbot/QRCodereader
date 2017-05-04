@@ -37,7 +37,7 @@ Changes are not accepted at this time
 
 ## Know bugs
 Some time the detector cannot detect the barcode.    
-QRCodes are very hard for the detector to read.
+QRCodes are very hard for the detector to read (try to scan single QRCodes in landscape mode).
  
 ## Change log
 * 01-05-2017 Initial Commit
