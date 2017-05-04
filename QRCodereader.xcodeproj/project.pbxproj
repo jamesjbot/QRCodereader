@@ -7,21 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A725E0681EBACD42007D2058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725E0671EBACD42007D2058 /* AppDelegate.swift */; };
-		A725E06A1EBACD42007D2058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725E0691EBACD42007D2058 /* ViewController.swift */; };
-		A725E06D1EBACD42007D2058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A725E06B1EBACD42007D2058 /* Main.storyboard */; };
 		A725E06F1EBACD42007D2058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A725E06E1EBACD42007D2058 /* Assets.xcassets */; };
-		A725E0721EBACD42007D2058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A725E0701EBACD42007D2058 /* LaunchScreen.storyboard */; };
+		A725E07A1EBACF47007D2058 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A725E0791EBACF47007D2058 /* Podfile */; };
+		A725E07C1EBACF52007D2058 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A725E07B1EBACF52007D2058 /* README.md */; };
+		A725E07E1EBACF95007D2058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725E07D1EBACF95007D2058 /* AppDelegate.swift */; };
+		A725E0841EBACFA3007D2058 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725E07F1EBACFA3007D2058 /* CameraViewController.swift */; };
+		A725E0851EBACFA3007D2058 /* DrawingUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725E0801EBACFA3007D2058 /* DrawingUtility.swift */; };
+		A725E0861EBACFA3007D2058 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A725E0811EBACFA3007D2058 /* Info.plist */; };
+		A725E0871EBACFA3007D2058 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A725E0821EBACFA3007D2058 /* MainViewController.swift */; };
+		A725E0881EBACFA3007D2058 /* multi_values.png in Resources */ = {isa = PBXBuildFile; fileRef = A725E0831EBACFA3007D2058 /* multi_values.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A725E0641EBACD42007D2058 /* QRCodereader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodereader.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A725E0671EBACD42007D2058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A725E0691EBACD42007D2058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A725E06C1EBACD42007D2058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A725E06E1EBACD42007D2058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A725E0711EBACD42007D2058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A725E0731EBACD42007D2058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A725E0791EBACF47007D2058 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		A725E07B1EBACF52007D2058 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A725E07D1EBACF95007D2058 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A725E07F1EBACFA3007D2058 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		A725E0801EBACFA3007D2058 /* DrawingUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawingUtility.swift; sourceTree = "<group>"; };
+		A725E0811EBACFA3007D2058 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A725E0821EBACFA3007D2058 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A725E0831EBACFA3007D2058 /* multi_values.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = multi_values.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +61,15 @@
 		A725E0661EBACD42007D2058 /* QRCodereader */ = {
 			isa = PBXGroup;
 			children = (
-				A725E0671EBACD42007D2058 /* AppDelegate.swift */,
-				A725E0691EBACD42007D2058 /* ViewController.swift */,
-				A725E06B1EBACD42007D2058 /* Main.storyboard */,
+				A725E07F1EBACFA3007D2058 /* CameraViewController.swift */,
+				A725E0801EBACFA3007D2058 /* DrawingUtility.swift */,
+				A725E0811EBACFA3007D2058 /* Info.plist */,
+				A725E0821EBACFA3007D2058 /* MainViewController.swift */,
+				A725E0831EBACFA3007D2058 /* multi_values.png */,
+				A725E07D1EBACF95007D2058 /* AppDelegate.swift */,
+				A725E0791EBACF47007D2058 /* Podfile */,
 				A725E06E1EBACD42007D2058 /* Assets.xcassets */,
-				A725E0701EBACD42007D2058 /* LaunchScreen.storyboard */,
-				A725E0731EBACD42007D2058 /* Info.plist */,
+				A725E07B1EBACF52007D2058 /* README.md */,
 			);
 			path = QRCodereader;
 			sourceTree = "<group>";
@@ -124,9 +134,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A725E0721EBACD42007D2058 /* LaunchScreen.storyboard in Resources */,
 				A725E06F1EBACD42007D2058 /* Assets.xcassets in Resources */,
-				A725E06D1EBACD42007D2058 /* Main.storyboard in Resources */,
+				A725E0881EBACFA3007D2058 /* multi_values.png in Resources */,
+				A725E07A1EBACF47007D2058 /* Podfile in Resources */,
+				A725E0861EBACFA3007D2058 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,31 +148,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A725E06A1EBACD42007D2058 /* ViewController.swift in Sources */,
-				A725E0681EBACD42007D2058 /* AppDelegate.swift in Sources */,
+				A725E07E1EBACF95007D2058 /* AppDelegate.swift in Sources */,
+				A725E07C1EBACF52007D2058 /* README.md in Sources */,
+				A725E0841EBACFA3007D2058 /* CameraViewController.swift in Sources */,
+				A725E0851EBACFA3007D2058 /* DrawingUtility.swift in Sources */,
+				A725E0871EBACFA3007D2058 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A725E06B1EBACD42007D2058 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A725E06C1EBACD42007D2058 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A725E0701EBACD42007D2058 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A725E0711EBACD42007D2058 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A725E0741EBACD42007D2058 /* Debug */ = {

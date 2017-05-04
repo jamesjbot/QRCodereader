@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  QRCodereader
 //
-//  Created by James Jongsurasithiwat on 5/3/17.
+//  Created by James Jongsurasithiwat on 4/27/17.
 //  Copyright © 2017 James Jongs. All rights reserved.
 //
 
